@@ -52,7 +52,7 @@ dotenv.config({ debug: true });
 const app = express();
 
 app.use(cors({
- origin: 'http://localhost:5173',
+ origin: 'https://fees-management-1-ui.onrender.com',
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
   
