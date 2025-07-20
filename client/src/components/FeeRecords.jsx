@@ -12,7 +12,7 @@ function FeeRecords() {
     const fetchFeeRecords = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get(import.meta.env.VITE_API_URL || 'http://localhost:5000/api/fees', {
+        const res = await axios.get(import.meta.env.VITE_API_URL || 'https://fees-management-1.vercel.app/api/fees', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setFeeRecords(res.data);
