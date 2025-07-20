@@ -152,7 +152,7 @@ function Login() {
 
   const handleSubmit = async () => {
     try {
-      const url = isRegister ? 'http://localhost:5000/api/auth/register' : 'http://localhost:5000/api/auth/login';
+      const url = isRegister ? 'https://fees-management-1-backend.onrender.com/api/auth/register' : 'https://fees-management-1-backend.onrender.com/api/auth/login';
       const data = isRegister ? { email, password, name } : { email, password };
       const res = await axios.post(url, data);
       localStorage.setItem('token', res.data.token);
