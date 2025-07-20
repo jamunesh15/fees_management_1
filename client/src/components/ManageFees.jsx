@@ -16,7 +16,7 @@ function ManageFees() {
   const [editPaymentDate, setEditPaymentDate] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const API_URL = import.meta.env.VITE_API_URL || 'https://fees-management-1.vercel.app';
 
   useEffect(() => {
     const fetchData = async () => {
