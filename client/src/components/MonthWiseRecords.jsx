@@ -2,6 +2,7 @@
 
 
 
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -92,7 +93,7 @@ function MonthWiseRecords() {
   }
 
   return (
-    <div className="p-4 sm:p-6 mt-[40px] ">
+    <div className="p-4 sm:p-6 mt-[40px]">
       <h2 className="text-2xl mb-4 text-indigo-300">Month-Wise Fee Records</h2>
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
         <input
@@ -150,9 +151,14 @@ function MonthWiseRecords() {
                     </div>
                   ) : (
                     <>
-                      <img src={record.student.avatar} alt={record.student.name} className="w-10 h-10 mr-3 rounded-full" />
+                      <img
+                        src={record.student?.avatar || '/default-avatar.png'}
+                        alt={record.student?.name || 'Unknown Student'}
+                        className="w-10 h-10 mr-3 rounded-full"
+                        onError={(e) => { e.target.src = '/default-avatar.png'; }}
+                      />
                       <div className="flex-1">
-                        <p className="text-gray-100"><strong>{record.student.name}</strong></p>
+                        <p className="text-gray-100"><strong>{record.student?.name || 'Unknown Student'}</strong></p>
                         <p className="text-gray-400 text-sm">Mode: {record.paymentMode}</p>
                         <p className="text-gray-400 text-sm">Date: {new Date(record.paymentDate).toLocaleDateString()}</p>
                       </div>
