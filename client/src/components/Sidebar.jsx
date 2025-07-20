@@ -54,16 +54,22 @@ function Sidebar({ theme }) {
               <li className="mb-4">
                 <Link to="/month-wise-records" onClick={handleLinkClick} className="text-gray-100 hover:text-indigo-300 transition-colors duration-200">Month-Wise Records</Link>
               </li>
+  
+    <li>
+    
+  <div className=' mb-2 mt-[10px] ' >
+          {/* <ThemeToggle theme={theme} toggleTheme={() => { toggleTheme(); setIsOpen(false); }} /> */}
+          <button onClick={handleLogout} className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded transform hover:scale-105 transition-transform duration-200">Logout</button>
+        </div>
+    </li>
+              
             </ul>
           </nav>
         </div>
 
         
 
-  <div className=' mb-2 ' >
-          {/* <ThemeToggle theme={theme} toggleTheme={() => { toggleTheme(); setIsOpen(false); }} /> */}
-          <button onClick={handleLogout} className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded transform hover:scale-105 transition-transform duration-200">Logout</button>
-        </div>
+  
         
       </div>
     </>
