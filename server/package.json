@@ -1,73 +1,72 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "@vue/cli": "^5.0.8",
-    "bcrypt": "^6.0.0",
-    "cloudinary": "^2.6.1",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "crypto": "^1.0.1",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "express-fileupload": "^1.5.1",
-    "jsonwebtoken": "^9.0.2",
-    "mime": "^4.0.7",
-    "mongoose": "^8.15.1",
-    "nodemailer": "^7.0.3",
-    "nodemon": "^3.1.10",
-    "otp-generator": "^4.0.1",
-    "razorpay": "^2.9.6",
-    "passport": "^0.7.0",
-    "passport-google-oauth20": "^2.0.0",
-    "@ramonak/react-progress-bar": "^5.4.0",
-    "@reduxjs/toolkit": "^2.8.2",
-    "axios": "^1.10.0",
-    "body-parser": "^2.2.0",
-    "chart.js": "^4.5.0",
-    "concurrently": "^9.1.2",
-    "copy-to-clipboard": "^3.3.3",
-    "express": "^5.1.0",
-    "express-session": "^1.18.1",
-    "framer-motion": "^12.19.2",
-    "gapi-script": "^1.2.0",
-    "google-auth-library": "^10.1.0",
-    "mime-types": "^3.0.1",
-    "passport": "^0.7.0",
-    "passport-google-oauth20": "^2.0.0",
-    "react": "^18.2.0",
-    "react-chartjs-2": "^5.3.0",
-    "react-dom": "^18.2.0",
-    "react-dropzone": "^14.3.8",
-    "react-error-boundary": "^6.0.0",
-    "react-hook-form": "^7.58.0",
-    "react-hot-toast": "^2.5.2",
-    "react-icons": "^5.5.0",
-    "react-markdown": "^10.1.0",
-    "react-otp-input": "^3.1.1",
-    "react-player": "^2.16.0",
-    "react-rating-stars-component": "^2.2.0",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^7.6.2",
-    "react-scripts": "5.0.1",
-    "react-super-responsive-table": "^6.0.2",
-    "react-type-animation": "^3.2.0",
-    "redux-toolkit": "^1.1.2",
-    "stream-http": "^3.2.0",
-    "swiper": "^11.2.8",
-    "util": "^0.12.5",
-    "video-react": "^0.16.0",
-    "web-vitals": "^2.1.4",
-    "y18n": "^5.0.8"
-  }
+  
+  
+	"scripts": {
+  
+  
+	  
+  
+	"start": "node server.js",
+  
+  
+	  
+  
+	"dev": "nodemon server.js"
+  
+  
+	},
+	"dependencies": {
+  
+  
+	  
+  
+	"bcrypt": "^6.0.0",
+  
+  
+	  
+  
+	"bcryptjs": "^3.0.2",
+  
+  
+	  
+  
+	"cors": "^2.8.5",
+  
+  
+	  
+  
+	"dotenv": "^17.2.0",
+  
+  
+	  
+  
+	"env": "^0.0.2",
+  
+  
+	  
+  
+	"express": "^5.1.0",
+  
+  
+	  
+  
+	"jsonwebtoken": "^9.0.2",
+  
+  
+	  
+  
+	"mongoose": "^8.16.4",
+  
+  
+	  
+  
+	"node-schedule": "^2.1.1",
+  
+  
+	  
+  
+	"nodemon": "^3.1.10"
+  
+  
+	}
 }
