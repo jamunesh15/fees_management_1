@@ -1,7 +1,6 @@
 
 
 
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -17,7 +16,7 @@ function ManageFees() {
   const [editPaymentDate, setEditPaymentDate] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = import.meta.env.VITE_API_URL || 'https://fees-management-1.vercel.app';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -126,7 +125,7 @@ function ManageFees() {
   }
 
   return (
-    <div className="p-4 sm:p-6 mt-[40px] ">
+    <div className="p-4 sm:p-6 mt-[40px]">
       <h2 className="text-2xl mb-4 text-indigo-300">Manage Fees</h2>
       <div className="mb-4 flex flex-col sm:flex-row gap-2">
         <select
@@ -202,9 +201,19 @@ function ManageFees() {
               </div>
             ) : (
               <>
-                <img src={record.student.avatar} alt={record.student.name} className="w-10 h-10 mr-3 rounded-full" />
+                <img
+                  src={record.student?.avatar || 'https://via.placeholder.com/40'}
+                  alt={record.student?.name || 'Unknown Student'}
+                  className="w-10 h-10 mr-3 rounded-full"
+                  onError={(e) => {
+                    if (!e.target.dataset.hasError) {
+                      e.target.src = 'https://via.placeholder.com/40';
+                      e.target.dataset.hasError = 'true';
+                    }
+                  }}
+                />
                 <div className="flex-1">
-                  <p className="text-gray-100"><strong>{record.student.name}</strong></p>
+                  <p className="text-gray-100"><strong>{record.student?.name || 'Unknown Student'}</strong></p>
                   <p className="text-gray-400 text-sm">Mode: {record.paymentMode}</p>
                   <p className="text-gray-400 text-sm">Date: {new Date(record.paymentDate).toLocaleDateString()}</p>
                 </div>
