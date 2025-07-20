@@ -9,7 +9,7 @@ function FeeRecords() {
   useEffect(() => {
     const fetchFeeRecords = async () => {
       const token = localStorage.getItem('token');
-      const res = await axios.get('https://fees-management-1-backend.onrender.com/api/fees', {
+      const res = await axios.get('https://fees-management-1.vercel.app/api/fees', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setFeeRecords(res.data);
